@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, width=device-width, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/jquery.mobile-1.4.5.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <!-- page d'accueil -->
+    <div id="home" data-role="page">
+      <div data-role="header">
+        <h1>Contac'T ma</h1>
+      </div>
+
+      <div data-role="main" class="ui-content">
+        <a href="#contact-add" data-role="button" data-icon="plus" data-iconpos="right"
+          >Ajouter</a
+        >
+        <ul
+          id="contactList"
+          data-role="listview"
+          data-inset="true"
+          data-filter="true"
+          data-filter-placeholder="Rechercher un contact"
+        ></ul>
+      </div>
+
+      <div data-role="footer" data-position="fixed">
+        <h1>Contac'T ma &copy; 2023</h1>
+      </div>
+    </div>
+
+    <!-- page details contact -->
+    <div id="contact-show" data-role="page">
+      <div data-role="header">
+        <a data-rel="back" data-icon="home" data-iconpos="notext"></a>
+        <h1>Contac'T ma</h1>
+      </div>
+
+      <div data-role="main" class="ui-content">
+        <a href="" data-role="button" data-icon="done" data-iconpos="edit"
+          >Détail Contact</a
+        >
+        <ul id="detail" data-role="listview" data-inset="true"></ul>
+      </div>
+
+      <div data-role="footer" data-position="fixed">
+        <h1>Contac'T ma &copy; 2023</h1>
+      </div>
+    </div>
+
+    <!-- Page ajout -->
+    <div id="contact-add" data-role="page">
+      <div data-role="header">
+        <a data-rel="back" data-icon="home" data-iconpos="notext"></a>
+        <h1>Contac'T ma</h1>
+      </div>
+
+      <div data-role="main" class="ui-content">
+        <p href="" data-role="button" data-icon="done" data-iconpos="edit"
+          >Détail Contact</p>
+        <ul id="detail" data-role="listview" data-inset="true"></ul>
+      </div>
+
+      <div data-role="footer" data-position="fixed">
+        <h1>Contac'T ma &copy; 2023</h1>
+      </div>
+    </div>
+  </body>
+</html>
