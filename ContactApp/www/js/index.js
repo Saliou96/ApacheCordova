@@ -53,23 +53,21 @@ function getContact(contactId) {
 function showContact(contacts) {
   let contact = contacts[0];
   let contactInfo = `
-      <img src="../img/contact.png" height="100" width="100" alt="">
+  <li>
+    <img src="../img/contact.png" height="100" width="100"  alt="">
+  </li>
       <li>
           <h1>Nom du Contact</h1>
           <p>${contact.name.formatted}</p>
       </li>
       <li>
-          <h1>Numéros de téléphone</h1>
-          <ul>`;
-              for (const phoneNumber of contact.phoneNumbers) {
-                contactInfo += `
-                  <li>
-                      <p>${phoneNumber.value}</p>
-                  </li>`;
-              }
+          <h1>Numéros de téléphone</h1>`;
+            for (const phoneNumber of contact.phoneNumbers) {
+              contactInfo += `${phoneNumber.value}`;
+            }
 
-              contactInfo += `
-          </ul>
+            contactInfo += `
+
       </li>
       <li>
           <h1>Email</h1>
@@ -84,7 +82,9 @@ function showContact(contacts) {
       <li>
           <h1>Organisations</h1>
           <p>${
-            contact.organizations ? contact.organizations[0].name : "Non renségné"
+            contact.organizations
+              ? contact.organizations[0].name
+              : "Non renségné"
           }</p>
       </li>
   `;
